@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rolls-Royce Ghost | LUXDRIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: { extend: {} }
+      }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-thumb { background: #f2ca50; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        .shimmer-hover:hover { background: linear-gradient(90deg, rgba(242,202,80,1) 0%, rgba(255,255,255,0.8) 50%, rgba(242,202,80,1) 100%); background-size: 200% auto; animation: shimmer 1.5s infinite; }
+        @keyframes shimmer { to { background-position: 200% center; } }
+</style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30 selection:text-primary">
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-primary/15 shadow-2xl flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-4">
+<a class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform" data-icon="menu" href="profile.html">menu</a>
+<a class="font-headline-lg-mobile text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-[0.2em] uppercase" href="index.html">LUXDRIVE</a>
+</div>
+<div class="hidden md:flex gap-12">
+<nav class="flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-primary hover:text-primary-fixed transition-colors duration-300" href="fleet.html">FLEET</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="collections.html">COLLECTIONS</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="profile.html">VIP HUB</a>
+</nav>
+</div>
+<a class="bg-primary text-on-primary font-label-caps text-[10px] tracking-widest px-6 py-2 shimmer-hover transition-all active:scale-95 flex items-center justify-center" href="booking.html">CONCIERGE</a>
+</header>
+<main class="pt-24 pb-32">
+<section class="px-margin-mobile md:px-margin-desktop mb-16 relative h-[500px] md:h-[600px] rounded-xl overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1600&q=80')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="relative h-full flex flex-col justify-between p-8 md:p-12">
+<a href="fleet.html" class="text-primary font-label-caps text-label-caps hover:text-primary-fixed transition-colors w-fit flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span>BACK TO FLEET</span>
+</a>
+</div>
+</section>
+<section class="px-margin-mobile md:px-margin-desktop mb-16">
+<div class="max-w-4xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+<div>
+<div class="flex gap-2 mb-4">
+<span class="bg-primary/20 text-primary border border-primary/30 px-3 py-1 text-[10px] font-label-caps rounded-sm">V8 ENGINE</span>
+<span class="bg-primary/20 text-primary border border-primary/30 px-3 py-1 text-[10px] font-label-caps rounded-sm">LUXURY INTERIOR</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">Rolls-Royce<br/>Ghost</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">A modern expression of Rolls-Royce elegance with advanced dynamics and comfort. Tailored for serene journeys and discreet presence.</p>
+</div>
+<div class="flex flex-col items-start md:items-end gap-6">
+<div>
+<span class="block text-on-surface-variant font-label-caps text-[12px] opacity-70 mb-2">STARTING FROM</span>
+<span class="block text-primary font-headline-lg text-headline-lg">$950<span class="text-body-md font-body-md text-on-surface-variant">/day</span></span>
+</div>
+<a class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 shimmer-hover tracking-[0.2em] active:scale-95 transition-all" href="booking.html">BOOK NOW</a>
+</div>
+</div>
+</div>
+</section>
+<section class="px-margin-mobile md:px-margin-desktop mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-12">Technical Specifications</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4 text-2xl">speed</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Performance</h3>
+<p class="font-body-md text-on-surface-variant">Refined power delivery with smooth acceleration and adaptive suspension.</p>
+</div>
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4 text-2xl">local_gas_station</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Engine</h3>
+<p class="font-body-md text-on-surface-variant">4.0L twin-turbo V8 with advanced refinement and low NVH.</p>
+</div>
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4 text-2xl">airline_seat_individual_suite</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Interior</h3>
+<p class="font-body-md text-on-surface-variant">Sumptuous leather, bespoke wood, and available Starlight Headliner upgrades.</p>
+</div>
+</div>
+</section>
+<section class="px-margin-mobile md:px-margin-desktop">
+<div class="bg-surface-container-high border border-primary/20 rounded-xl p-12 md:p-16 text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-6">Interested in the Ghost?</h2>
+<p class="font-body-lg text-on-surface-variant mb-12">Reserve now or browse our full fleet of exclusive vehicles.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<a class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 shimmer-hover tracking-[0.2em] active:scale-95 transition-all" href="booking.html">RESERVE NOW</a>
+<a class="border border-primary/30 text-primary font-label-caps text-label-caps px-10 py-5 transition-colors hover:border-primary" href="fleet.html">BROWSE MORE VEHICLES</a>
+</div>
+</div>
+</section>
+</main>
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/95 backdrop-blur-2xl border-t border-primary/10 shadow-[0_-10px_20px_rgba(0,0,0,0.5)] flex justify-around items-center h-20 pb-safe px-4 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant gap-1 transition-all hover:text-primary-fixed-dim active:scale-95" href="fleet.html">
+<span class="material-symbols-outlined" data-icon="directions_car">directions_car</span>
+<span class="font-label-caps text-[8px] tracking-[0.1em]">FLEET</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold gap-1 scale-110 duration-500 ease-out active:scale-100" href="ghost-detail.html">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-label-caps text-[8px] tracking-[0.1em]">GHOST</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant gap-1 transition-all hover:text-primary-fixed-dim active:scale-95" href="booking.html">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-label-caps text-[8px] tracking-[0.1em]">BOOK</span>
+</a>
+</nav>
+</body>
+</html>

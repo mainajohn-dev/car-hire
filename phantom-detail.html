@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rolls-Royce Phantom | LUXDRIVE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-container": "#424862",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "on-secondary": "#292f48",
+                "background": "#121414",
+                "tertiary-fixed": "#e5e2e1",
+                "on-tertiary-fixed-variant": "#474646",
+                "error": "#ffb4ab",
+                "primary": "#f2ca50",
+                "surface-tint": "#e9c349",
+                "on-error": "#690005",
+                "on-primary": "#3c2f00",
+                "error-container": "#93000a",
+                "surface-container-lowest": "#0c0f0f",
+                "inverse-surface": "#e2e2e2",
+                "secondary-fixed-dim": "#bfc5e4",
+                "surface-container": "#1e2020",
+                "on-primary-container": "#554300",
+                "on-surface": "#e2e2e2",
+                "on-secondary-fixed-variant": "#3f465f",
+                "primary-fixed-dim": "#e9c349",
+                "surface": "#121414",
+                "primary-container": "#d4af37",
+                "on-tertiary-fixed": "#1c1b1b",
+                "on-primary-fixed-variant": "#574500",
+                "surface-variant": "#333535",
+                "on-secondary-container": "#b1b7d6",
+                "surface-dim": "#121414",
+                "on-secondary-fixed": "#141a32",
+                "surface-bright": "#37393a",
+                "inverse-on-surface": "#2f3131",
+                "tertiary-container": "#b5b2b2",
+                "secondary": "#bfc5e4",
+                "inverse-primary": "#735c00",
+                "surface-container-high": "#282a2b",
+                "on-surface-variant": "#d0c5af",
+                "tertiary": "#d0cecd",
+                "on-tertiary-container": "#454545",
+                "on-error-container": "#ffdad6",
+                "on-background": "#e2e2e2",
+                "on-primary-fixed": "#241a00",
+                "outline-variant": "#4d4635",
+                "secondary-fixed": "#dce1ff",
+                "outline": "#99907c",
+                "on-tertiary": "#313030",
+                "primary-fixed": "#ffe088",
+                "surface-container-highest": "#333535",
+                "surface-container-low": "#1a1c1c"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "margin-tablet": "40px",
+                "margin-mobile": "20px",
+                "gutter": "24px",
+                "margin-desktop": "80px",
+                "section-gap": "120px",
+                "container-max": "1440px"
+            },
+            "fontFamily": {
+                "body-md": ["Montserrat"],
+                "headline-lg": ["Playfair Display"],
+                "display-lg-mobile": ["Playfair Display"],
+                "label-md": ["Montserrat"],
+                "headline-lg-mobile": ["Playfair Display"],
+                "label-caps": ["Montserrat"],
+                "body-lg": ["Montserrat"],
+                "headline-xl": ["Playfair Display"],
+                "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "600"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                "headline-xl": ["60px", {"lineHeight": "72px", "fontWeight": "600"}],
+                "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-thumb { background: #f2ca50; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .shimmer-hover:hover {
+            background: linear-gradient(90deg, rgba(242,202,80,1) 0%, rgba(255,255,255,0.8) 50%, rgba(242,202,80,1) 100%);
+            background-size: 200% auto;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer { to { background-position: 200% center; } }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+</style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30 selection:text-primary">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-primary/15 shadow-2xl flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-4">
+<a class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform" data-icon="menu" href="profile.html">menu</a>
+<a class="font-headline-lg-mobile text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-[0.2em] uppercase" href="index.html">LUXDRIVE</a>
+</div>
+<div class="hidden md:flex gap-12">
+<nav class="flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-primary hover:text-primary-fixed transition-colors duration-300" href="fleet.html">FLEET</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="collections.html">COLLECTIONS</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="profile.html">VIP HUB</a>
+</nav>
+</div>
+<a class="bg-primary text-on-primary font-label-caps text-[10px] tracking-widest px-6 py-2 shimmer-hover transition-all active:scale-95 flex items-center justify-center" href="booking.html">
+            CONCIERGE
+        </a>
+</header>
+
+<main class="pt-24 pb-32">
+<!-- Hero Image Section -->
+<section class="px-margin-mobile md:px-margin-desktop mb-16 relative h-[500px] md:h-[600px] rounded-xl overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGmfF0YUfybERwb-2T1HfR-9bYakdz7Yb_EXBqAXQsVSe198EIiGu8v3VY6BBnHXkbgympi9dqLOdvsIUk4SEIlt4AGQktG6cR60pdrib356AFwE3lIPWFmouqSjopHCimltzcMfpNhiy46HVnRpytDywnHVGK3TO-gXGLRrgqTNg7vmtzsD0GSi6S3jNVKQE2WqnXjqQ-LXqro9cu96d9rzTvZD1B8H7ylBuekUve8duMhJT_7RMkyRjO7qgvQSKryJfbi0EUN_U')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="relative h-full flex flex-col justify-between p-8 md:p-12">
+<a href="fleet.html" class="text-primary font-label-caps text-label-caps hover:text-primary-fixed transition-colors w-fit flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span>BACK TO FLEET</span>
+</a>
+</div>
+</section>
+
+<!-- Vehicle Overview -->
+<section class="px-margin-mobile md:px-margin-desktop mb-16">
+<div class="max-w-4xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+<div>
+<div class="flex gap-2 mb-4">
+<span class="bg-primary/20 text-primary border border-primary/30 px-3 py-1 text-[10px] font-label-caps rounded-sm">V12 ENGINE</span>
+<span class="bg-primary/20 text-primary border border-primary/30 px-3 py-1 text-[10px] font-label-caps rounded-sm">BESPOKE INTERIOR</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">Rolls-Royce<br/>Phantom</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">The pinnacle of automotive luxury. Hand-crafted in Goodwood, England by master artisans. Designed for those who accept no compromise. Every detail is meticulously engineered for unparalleled comfort and exclusivity.</p>
+</div>
+<div class="flex flex-col items-start md:items-end gap-6">
+<div>
+<span class="block text-on-surface-variant font-label-caps text-[12px] opacity-70 mb-2">STARTING FROM</span>
+<span class="block text-primary font-headline-lg text-headline-lg">$1,200<span class="text-body-md font-body-md text-on-surface-variant">/day</span></span>
+</div>
+<a class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 shimmer-hover tracking-[0.2em] active:scale-95 transition-all" href="booking.html">
+                        BOOK NOW
+                    </a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Specifications Grid -->
+<section class="px-margin-mobile md:px-margin-desktop mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-12">Technical Specifications</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4 text-2xl">speed</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Performance</h3>
+<p class="font-body-md text-on-surface-variant">0-60 mph in 5.1 seconds. Top speed of 149 mph with adaptive suspension.</p>
+</div>
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4 text-2xl">local_gas_station</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Engine</h3>
+<p class="font-body-md text-on-surface-variant">6.75L V12 twin-turbocharged engine producing 563 horsepower.</p>
+</div>
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4 text-2xl">straighten</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Dimensions</h3>
+<p class="font-body-md text-on-surface-variant">5.98m length, 1.99m width. Wheelbase of 3.52m for ultimate interior space.</p>
+</div>
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4 text-2xl">airline_seat_individual_suite</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Interior</h3>
+<p class="font-body-md text-on-surface-variant">Premium leather, 22-speaker audio system, Starlight Headliner with 1,400+ fiber optic lights.</p>
+</div>
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4 text-2xl">security</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Safety</h3>
+<p class="font-body-md text-on-surface-variant">Advanced driver assistance systems. Night vision with thermal imaging technology.</p>
+</div>
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4 text-2xl">device_thermostat</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-2">Climate Control</h3>
+<p class="font-body-md text-on-surface-variant">Four-zone climate control. Heated and ventilated seats with massage function.</p>
+</div>
+</div>
+</section>
+
+<!-- Interior Gallery -->
+<section class="px-margin-mobile md:px-margin-desktop mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-12">Interior Craftsmanship</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="relative h-[350px] rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXk2N06ECRTXjegdGBKFbXTvB_jGwSR3Q_UQ8_8NSI6l5Dg78v2ShWYiF5-Qy97BEoL5rtDnjTCFAwosC2R4TEulQlJq9r0gUVUlzYfw7DiEShXq--bKttB6gKu6IKG7Ihlp6f5ll11STDJwoByS8KP3Hc2_xCF5Uqdf1zHdHDAnYSXr4Q45SWKU0StlnK27N_z961IHoMDUEJhqBC5Er8xMFrjfLOmVn2daXrrCq4UB9mv6KNlNyICyxBC8hWyLVHuYUJpk32FEg')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-8">
+<h3 class="font-headline-lg text-on-surface">Starlight Headliner</h3>
+<p class="font-body-md text-on-surface-variant">Handcrafted fiber optic constellation headliner with 1,400+ individual lights.</p>
+</div>
+</div>
+<div class="space-y-gutter">
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-4">Premium Materials</h3>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li>• Hand-stitched leather upholstery in bespoke colors</li>
+<li>• Burled walnut wood trim from sustainable sources</li>
+<li>• Baccarat crystal glasses and champagne flutes</li>
+<li>• Personalized monogramming available</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Call to Action -->
+<section class="px-margin-mobile md:px-margin-desktop">
+<div class="bg-surface-container-high border border-primary/20 rounded-xl p-12 md:p-16">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-6">Ready to Experience the Phantom?</h2>
+<p class="font-body-lg text-on-surface-variant mb-12">Connect with our concierge team or browse other vehicles in our exclusive fleet.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<a class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 shimmer-hover tracking-[0.2em] active:scale-95 transition-all" href="booking.html">
+                        RESERVE NOW
+                    </a>
+<a class="border border-primary/30 text-primary font-label-caps text-label-caps px-10 py-5 transition-colors hover:border-primary" href="fleet.html">
+                        BROWSE MORE VEHICLES
+                    </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Bottom Navigation Bar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/95 backdrop-blur-2xl border-t border-primary/10 shadow-[0_-10px_20px_rgba(0,0,0,0.5)] flex justify-around items-center h-20 pb-safe px-4 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant gap-1 transition-all hover:text-primary-fixed-dim active:scale-95" href="fleet.html">
+<span class="material-symbols-outlined" data-icon="directions_car">directions_car</span>
+<span class="font-label-caps text-[8px] tracking-[0.1em]">FLEET</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary font-bold gap-1 scale-110 duration-500 ease-out active:scale-100" href="phantom-detail.html">
+<span class="material-symbols-outlined" data-icon="info">info</span>
+<span class="font-label-caps text-[8px] tracking-[0.1em]">PHANTOM</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant gap-1 transition-all hover:text-primary-fixed-dim active:scale-95" href="booking.html">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-label-caps text-[8px] tracking-[0.1em]">BOOK</span>
+</a>
+</nav>
+</body>
+</html>

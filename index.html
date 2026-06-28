@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXDRIVE | Ultra-Exclusive Automotive Concierge</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "secondary-container": "#424862",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "on-secondary": "#292f48",
+                "background": "#121414",
+                "tertiary-fixed": "#e5e2e1",
+                "on-tertiary-fixed-variant": "#474646",
+                "error": "#ffb4ab",
+                "primary": "#f2ca50",
+                "surface-tint": "#e9c349",
+                "on-error": "#690005",
+                "on-primary": "#3c2f00",
+                "error-container": "#93000a",
+                "surface-container-lowest": "#0c0f0f",
+                "inverse-surface": "#e2e2e2",
+                "secondary-fixed-dim": "#bfc5e4",
+                "surface-container": "#1e2020",
+                "on-primary-container": "#554300",
+                "on-surface": "#e2e2e2",
+                "on-secondary-fixed-variant": "#3f465f",
+                "primary-fixed-dim": "#e9c349",
+                "surface": "#121414",
+                "primary-container": "#d4af37",
+                "on-tertiary-fixed": "#1c1b1b",
+                "on-primary-fixed-variant": "#574500",
+                "surface-variant": "#333535",
+                "on-secondary-container": "#b1b7d6",
+                "surface-dim": "#121414",
+                "on-secondary-fixed": "#141a32",
+                "surface-bright": "#37393a",
+                "inverse-on-surface": "#2f3131",
+                "tertiary-container": "#b5b2b2",
+                "secondary": "#bfc5e4",
+                "inverse-primary": "#735c00",
+                "surface-container-high": "#282a2b",
+                "on-surface-variant": "#d0c5af",
+                "tertiary": "#d0cecd",
+                "on-tertiary-container": "#454545",
+                "on-error-container": "#ffdad6",
+                "on-background": "#e2e2e2",
+                "on-primary-fixed": "#241a00",
+                "outline-variant": "#4d4635",
+                "secondary-fixed": "#dce1ff",
+                "outline": "#99907c",
+                "on-tertiary": "#313030",
+                "primary-fixed": "#ffe088",
+                "surface-container-highest": "#333535",
+                "surface-container-low": "#1a1c1c"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "margin-tablet": "40px",
+                "margin-mobile": "20px",
+                "gutter": "24px",
+                "margin-desktop": "80px",
+                "section-gap": "120px",
+                "container-max": "1440px"
+            },
+            "fontFamily": {
+                "body-md": ["Montserrat"],
+                "headline-lg": ["Playfair Display"],
+                "display-lg-mobile": ["Playfair Display"],
+                "label-md": ["Montserrat"],
+                "headline-lg-mobile": ["Playfair Display"],
+                "label-caps": ["Montserrat"],
+                "body-lg": ["Montserrat"],
+                "headline-xl": ["Playfair Display"],
+                "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "600"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                "headline-xl": ["60px", {"lineHeight": "72px", "fontWeight": "600"}],
+                "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-thumb { background: #f2ca50; border-radius: 10px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .shimmer-hover:hover {
+            background: linear-gradient(90deg, rgba(242,202,80,1) 0%, rgba(255,255,255,0.8) 50%, rgba(242,202,80,1) 100%);
+            background-size: 200% auto;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer { to { background-position: 200% center; } }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+</style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary/30 selection:text-primary">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-primary/15 shadow-2xl flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-4">
+<a class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform" data-icon="menu" href="profile.html">menu</a>
+<a class="font-headline-lg-mobile text-headline-lg-mobile md:text-headline-lg font-bold text-primary tracking-[0.2em] uppercase" href="index.html">LUXDRIVE</a>
+</div>
+<div class="hidden md:flex gap-12">
+<nav class="flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="fleet.html">FLEET</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="collections.html">COLLECTIONS</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="profile.html">VIP HUB</a>
+</nav>
+</div>
+<a class="bg-primary text-on-primary font-label-caps text-[10px] tracking-widest px-6 py-2 shimmer-hover transition-all active:scale-95 flex items-center justify-center" href="booking.html">
+            CONCIERGE
+        </a>
+</header>
+
+<main class="pt-24 pb-32">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop mb-section-gap relative h-[500px] md:h-[600px] rounded-xl overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGmfF0YUfybERwb-2T1HfR-9bYakdz7Yb_EXBqAXQsVSe198EIiGu8v3VY6BBnHXkbgympi9dqLOdvsIUk4SEIlt4AGQktG6cR60pdrib356AFwE3lIPWFmouqSjopHCimltzcMfpNhiy46HVnRpytDywnHVGK3TO-gXGLRrgqTNg7vmtzsD0GSi6S3jNVKQE2WqnXjqQ-LXqro9cu96d9rzTvZD1B8H7ylBuekUve8duMhJT_7RMkyRjO7qgvQSKryJfbi0EUN_U')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="relative h-full flex flex-col justify-between p-8 md:p-12">
+<div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">Experience Automotive Excellence</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">Welcome to LUXDRIVE, where ultra-exclusive vehicles meet personalized concierge service. Discover hand-crafted masterpieces from the world's most prestigious automotive houses.</p>
+</div>
+<a href="fleet.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 w-fit shimmer-hover tracking-[0.2em] active:scale-95 transition-all">
+                        EXPLORE FLEET
+                    </a>
+</div>
+</section>
+
+<!-- Featured Collections -->
+<section class="px-margin-mobile md:px-margin-desktop mb-section-gap">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-12">Curated Collections</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card 1 -->
+<a href="fleet.html" class="group relative h-[350px] rounded-xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGmfF0YUfybERwb-2T1HfR-9bYakdz7Yb_EXBqAXQsVSe198EIiGu8v3VY6BBnHXkbgympi9dqLOdvsIUk4SEIlt4AGQktG6cR60pdrib356AFwE3lIPWFmouqSjopHCimltzcMfpNhiy46HVnRpytDywnHVGK3TO-gXGLRrgqTNg7vmtzsD0GSi6S3jNVKQE2WqnXjqQ-LXqro9cu96d9rzTvZD1B8H7ylBuekUve8duMhJT_7RMkyRjO7qgvQSKryJfbi0EUN_U')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-8">
+<h3 class="font-headline-lg text-on-surface mb-2">The Classic Collection</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Timeless elegance with British heritage and European craftsmanship.</p>
+<div class="flex items-center gap-2 text-primary font-label-caps text-label-caps group-hover:gap-4 transition-all">
+<span>EXPLORE</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</a>
+
+<!-- Card 2 -->
+<a href="collections.html" class="group relative h-[350px] rounded-xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('images/audi-a6.jpg')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-8">
+<h3 class="font-headline-lg text-on-surface mb-2">Performance & Speed</h3>
+<p class="font-body-md text-on-surface-variant mb-4">High-performance vehicles engineered for the ultimate driving experience.</p>
+<div class="flex items-center gap-2 text-primary font-label-caps text-label-caps group-hover:gap-4 transition-all">
+<span>EXPLORE</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+</a>
+</div>
+</section>
+
+<!-- Why Choose LUXDRIVE -->
+<section class="px-margin-mobile md:px-margin-desktop mb-section-gap">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-12">Why Choose LUXDRIVE</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">verified</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-4">Verified Authenticity</h3>
+<p class="font-body-md text-on-surface-variant">Every vehicle in our fleet is authenticated and comes with complete provenance documentation.</p>
+</div>
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">travel_info</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-4">Personal Concierge</h3>
+<p class="font-body-md text-on-surface-variant">Dedicated concierge team available 24/7 to arrange every detail of your experience.</p>
+</div>
+<div class="bg-surface-container-high border border-outline-variant/30 p-8 rounded-xl hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">card_travel</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-4">Luxury Assured</h3>
+<p class="font-body-md text-on-surface-variant">Complimentary premium insurance, fuel, and personalized cabin fragrance with every booking.</p>
+</div>
+</div>
+</section>
+
+<!-- Call to Action -->
+<section class="px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="bg-surface-container-high border border-primary/20 rounded-xl p-12 md:p-16 text-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-6">Ready to Experience Luxury?</h2>
+<p class="font-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Start exploring our exclusive fleet or connect with our concierge team to arrange your perfect automotive experience.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<a href="fleet.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 shimmer-hover tracking-[0.2em] active:scale-95 transition-all">
+                        BROWSE FLEET
+                    </a>
+<a href="booking.html" class="border border-primary/30 text-primary font-label-caps text-label-caps px-10 py-5 transition-colors hover:border-primary">
+                        BOOK CONCIERGE
+                    </a>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Bottom Navigation Bar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/95 backdrop-blur-2xl border-t border-primary/10 shadow-[0_-10px_20px_rgba(0,0,0,0.5)] flex justify-around items-center h-20 pb-safe px-4 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-primary font-bold gap-1 scale-110 duration-500 ease-out active:scale-100" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-[8px] tracking-[0.1em]">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant gap-1 transition-all hover:text-primary-fixed-dim active:scale-95" href="fleet.html">
+<span class="material-symbols-outlined" data-icon="directions_car">directions_car</span>
+<span class="font-label-caps text-[8px] tracking-[0.1em]">FLEET</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant gap-1 transition-all hover:text-primary-fixed-dim active:scale-95" href="collections.html">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-caps text-[8px] tracking-[0.1em]">COLLECTIONS</span>
+</a>
+</nav>
+</body>
+</html>
