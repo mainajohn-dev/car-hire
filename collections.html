@@ -1,23 +1,213 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>LUXDRIVE | Collections</title>
+<meta name="description" content="Explore LUXDRIVE's curated luxury vehicle collections — Ultra-Luxury Icons, High-End Speed, and Bespoke Experiences."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: { extend: {} }
-      }
-    </script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+            "secondary-container": "var(--secondary-container)",
+            "on-secondary": "var(--on-secondary)",
+            "background": "var(--background)",
+            "error": "var(--error)",
+            "primary": "var(--primary)",
+            "surface-tint": "var(--surface-tint)",
+            "on-primary": "var(--on-primary)",
+            "surface-container-lowest": "var(--surface-container-lowest)",
+            "surface-container": "var(--surface-container)",
+            "on-surface": "var(--on-surface)",
+            "primary-fixed-dim": "var(--primary-fixed-dim)",
+            "surface": "var(--surface)",
+            "primary-container": "var(--primary-container)",
+            "surface-variant": "var(--surface-variant)",
+            "on-secondary-container": "var(--on-secondary-container)",
+            "surface-dim": "var(--surface-dim)",
+            "surface-bright": "var(--surface-bright)",
+            "secondary": "var(--secondary)",
+            "inverse-primary": "var(--inverse-primary)",
+            "surface-container-high": "var(--surface-container-high)",
+            "on-surface-variant": "var(--on-surface-variant)",
+            "on-background": "var(--on-background)",
+            "outline-variant": "var(--outline-variant)",
+            "outline": "var(--outline)",
+            "primary-fixed": "var(--primary-fixed)",
+            "surface-container-highest": "var(--surface-container-highest)",
+            "surface-container-low": "var(--surface-container-low)"
+        },
+        "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+        },
+        "spacing": {
+            "margin-tablet": "40px",
+            "margin-mobile": "20px",
+            "gutter": "24px",
+            "margin-desktop": "80px",
+            "section-gap": "120px",
+            "container-max": "1440px"
+        },
+        "fontFamily": {
+            "body-md": ["Montserrat"],
+            "headline-lg": ["Playfair Display"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-md": ["Montserrat"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "label-caps": ["Montserrat"],
+            "body-lg": ["Montserrat"],
+            "headline-xl": ["Playfair Display"],
+            "display-lg": ["Playfair Display"]
+        },
+        "fontSize": {
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+            "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+            "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "600"}],
+            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+            "headline-xl": ["60px", {"lineHeight": "72px", "fontWeight": "600"}],
+            "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+        }
+      },
+    },
+  }
+</script>
 <style>
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        :root {
+            --secondary-container: #d9e6f7;
+            --tertiary-fixed-dim: #c9d4df;
+            --on-secondary: #1d3046;
+            --background: #eaf4ff;
+            --tertiary-fixed: #edf4fb;
+            --on-tertiary-fixed-variant: #425465;
+            --error: #b3261e;
+            --primary: #b88a12;
+            --surface-tint: #2f6fa3;
+            --on-error: #ffffff;
+            --on-primary: #241a00;
+            --error-container: #f9dedc;
+            --surface-container-lowest: #f8fbff;
+            --inverse-surface: #26323d;
+            --secondary-fixed-dim: #c6d8ee;
+            --surface-container: #dcecff;
+            --on-primary-container: #3d2d00;
+            --on-surface: #142433;
+            --on-secondary-fixed-variant: #40556d;
+            --primary-fixed-dim: #d4a72d;
+            --surface: #eaf4ff;
+            --primary-container: #f1c95a;
+            --on-tertiary-fixed: #182633;
+            --on-primary-fixed-variant: #5c4400;
+            --surface-variant: #c8dbef;
+            --on-secondary-container: #34485e;
+            --surface-dim: #cfe3f8;
+            --on-secondary-fixed: #102235;
+            --surface-bright: #f6fbff;
+            --inverse-on-surface: #eaf4ff;
+            --tertiary-container: #d6e3ee;
+            --secondary: #4b6f91;
+            --inverse-primary: #ffe088;
+            --surface-container-high: #d4e7fb;
+            --on-surface-variant: #405263;
+            --tertiary: #52687b;
+            --on-tertiary-container: #334656;
+            --on-error-container: #410002;
+            --on-background: #142433;
+            --on-primary-fixed: #211600;
+            --outline-variant: #a9bfd4;
+            --secondary-fixed: #e1efff;
+            --outline: #6f8499;
+            --on-tertiary: #ffffff;
+            --primary-fixed: #ffe39a;
+            --surface-container-highest: #c8ddf2;
+            --surface-container-low: #e3f0ff;
+        }
+
+        .dark {
+            --secondary-container: #424862;
+            --tertiary-fixed-dim: #c8c6c5;
+            --on-secondary: #292f48;
+            --background: #121414;
+            --tertiary-fixed: #e5e2e1;
+            --on-tertiary-fixed-variant: #474646;
+            --error: #ffb4ab;
+            --primary: #f2ca50;
+            --surface-tint: #e9c349;
+            --on-error: #690005;
+            --on-primary: #3c2f00;
+            --error-container: #93000a;
+            --surface-container-lowest: #0c0f0f;
+            --inverse-surface: #e2e2e2;
+            --secondary-fixed-dim: #bfc5e4;
+            --surface-container: #1e2020;
+            --on-primary-container: #554300;
+            --on-surface: #e2e2e2;
+            --on-secondary-fixed-variant: #3f465f;
+            --primary-fixed-dim: #e9c349;
+            --surface: #121414;
+            --primary-container: #d4af37;
+            --on-tertiary-fixed: #1c1b1b;
+            --on-primary-fixed-variant: #574500;
+            --surface-variant: #333535;
+            --on-secondary-container: #b1b7d6;
+            --surface-dim: #121414;
+            --on-secondary-fixed: #141a32;
+            --surface-bright: #37393a;
+            --inverse-on-surface: #2f3131;
+            --tertiary-container: #b5b2b2;
+            --secondary: #bfc5e4;
+            --inverse-primary: #735c00;
+            --surface-container-high: #282a2b;
+            --on-surface-variant: #d0c5af;
+            --tertiary: #d0cecd;
+            --on-tertiary-container: #454545;
+            --on-error-container: #ffdad6;
+            --on-background: #e2e2e2;
+            --on-primary-fixed: #241a00;
+            --outline-variant: #4d4635;
+            --secondary-fixed: #dce1ff;
+            --outline: #99907c;
+            --on-tertiary: #313030;
+            --primary-fixed: #ffe088;
+            --surface-container-highest: #333535;
+            --surface-container-low: #1a1c1c;
+        }
+
+        .theme-toggle {
+            width: 2.75rem;
+            height: 2.75rem;
+            border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+            background: color-mix(in srgb, var(--surface-container-high) 88%, transparent);
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary);
+            background: var(--surface-container-highest);
+        }
+
+        .theme-toggle:active { transform: scale(0.95); }
+body { min-height: max(884px, 100dvh); }
+</style>
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
         ::-webkit-scrollbar { width: 4px; height: 4px; }
-        ::-webkit-scrollbar-thumb { background: #f2ca50; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
         ::-webkit-scrollbar-track { background: transparent; }
-        .shimmer-hover:hover { background: linear-gradient(90deg, rgba(242,202,80,1) 0%, rgba(255,255,255,0.8) 50%, rgba(242,202,80,1) 100%); background-size: 200% auto; animation: shimmer 1.5s infinite; }
+        .shimmer-hover:hover { background: linear-gradient(90deg, var(--primary) 0%, color-mix(in srgb, var(--surface-bright) 80%, transparent) 50%, var(--primary) 100%); background-size: 200% auto; animation: shimmer 1.5s infinite; }
         @keyframes shimmer { to { background-position: 200% center; } }
 </style>
 </head>
@@ -34,7 +224,10 @@
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="profile.html">VIP HUB</a>
 </nav>
 </div>
+<div class="flex items-center gap-3">
+<button class="theme-toggle rounded-lg" type="button" data-theme-toggle aria-label="Switch color mode" title="Switch color mode"><span class="material-symbols-outlined">light_mode</span></button>
 <a class="bg-primary text-on-primary font-label-caps text-[10px] tracking-widest px-6 py-2 shimmer-hover transition-all active:scale-95 flex items-center justify-center" href="booking.html">CONCIERGE</a>
+</div>
 </header>
 <main class="pt-24 pb-32">
 <section class="px-margin-mobile md:px-margin-desktop mb-16">
@@ -98,5 +291,36 @@
 <span class="font-label-caps text-[8px] tracking-[0.1em]">COLLECTIONS</span>
 </a>
 </nav>
+<script>
+    (() => {
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('luxdrive-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const useDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+        root.classList.toggle('dark', useDark);
+
+        const syncToggle = () => {
+            const isDark = root.classList.contains('dark');
+            document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+                button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                button.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                const icon = button.querySelector('.material-symbols-outlined');
+                if (icon) icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            syncToggle();
+            document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const nextIsDark = !root.classList.contains('dark');
+                    root.classList.toggle('dark', nextIsDark);
+                    localStorage.setItem('luxdrive-theme', nextIsDark ? 'dark' : 'light');
+                    syncToggle();
+                });
+            });
+        });
+    })();
+</script>
 </body>
 </html>

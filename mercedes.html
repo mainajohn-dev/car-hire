@@ -4,8 +4,127 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Mercedes Hire | LUXDRIVE</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
+        :root {
+            --secondary-container: #d9e6f7;
+            --tertiary-fixed-dim: #c9d4df;
+            --on-secondary: #1d3046;
+            --background: #eaf4ff;
+            --tertiary-fixed: #edf4fb;
+            --on-tertiary-fixed-variant: #425465;
+            --error: #b3261e;
+            --primary: #b88a12;
+            --surface-tint: #2f6fa3;
+            --on-error: #ffffff;
+            --on-primary: #241a00;
+            --error-container: #f9dedc;
+            --surface-container-lowest: #f8fbff;
+            --inverse-surface: #26323d;
+            --secondary-fixed-dim: #c6d8ee;
+            --surface-container: #dcecff;
+            --on-primary-container: #3d2d00;
+            --on-surface: #142433;
+            --on-secondary-fixed-variant: #40556d;
+            --primary-fixed-dim: #d4a72d;
+            --surface: #eaf4ff;
+            --primary-container: #f1c95a;
+            --on-tertiary-fixed: #182633;
+            --on-primary-fixed-variant: #5c4400;
+            --surface-variant: #c8dbef;
+            --on-secondary-container: #34485e;
+            --surface-dim: #cfe3f8;
+            --on-secondary-fixed: #102235;
+            --surface-bright: #f6fbff;
+            --inverse-on-surface: #eaf4ff;
+            --tertiary-container: #d6e3ee;
+            --secondary: #4b6f91;
+            --inverse-primary: #ffe088;
+            --surface-container-high: #d4e7fb;
+            --on-surface-variant: #405263;
+            --tertiary: #52687b;
+            --on-tertiary-container: #334656;
+            --on-error-container: #410002;
+            --on-background: #142433;
+            --on-primary-fixed: #211600;
+            --outline-variant: #a9bfd4;
+            --secondary-fixed: #e1efff;
+            --outline: #6f8499;
+            --on-tertiary: #ffffff;
+            --primary-fixed: #ffe39a;
+            --surface-container-highest: #c8ddf2;
+            --surface-container-low: #e3f0ff;
+        }
+
+        .dark {
+            --secondary-container: #424862;
+            --tertiary-fixed-dim: #c8c6c5;
+            --on-secondary: #292f48;
+            --background: #121414;
+            --tertiary-fixed: #e5e2e1;
+            --on-tertiary-fixed-variant: #474646;
+            --error: #ffb4ab;
+            --primary: #f2ca50;
+            --surface-tint: #e9c349;
+            --on-error: #690005;
+            --on-primary: #3c2f00;
+            --error-container: #93000a;
+            --surface-container-lowest: #0c0f0f;
+            --inverse-surface: #e2e2e2;
+            --secondary-fixed-dim: #bfc5e4;
+            --surface-container: #1e2020;
+            --on-primary-container: #554300;
+            --on-surface: #e2e2e2;
+            --on-secondary-fixed-variant: #3f465f;
+            --primary-fixed-dim: #e9c349;
+            --surface: #121414;
+            --primary-container: #d4af37;
+            --on-tertiary-fixed: #1c1b1b;
+            --on-primary-fixed-variant: #574500;
+            --surface-variant: #333535;
+            --on-secondary-container: #b1b7d6;
+            --surface-dim: #121414;
+            --on-secondary-fixed: #141a32;
+            --surface-bright: #37393a;
+            --inverse-on-surface: #2f3131;
+            --tertiary-container: #b5b2b2;
+            --secondary: #bfc5e4;
+            --inverse-primary: #735c00;
+            --surface-container-high: #282a2b;
+            --on-surface-variant: #d0c5af;
+            --tertiary: #d0cecd;
+            --on-tertiary-container: #454545;
+            --on-error-container: #ffdad6;
+            --on-background: #e2e2e2;
+            --on-primary-fixed: #241a00;
+            --outline-variant: #4d4635;
+            --secondary-fixed: #dce1ff;
+            --outline: #99907c;
+            --on-tertiary: #313030;
+            --primary-fixed: #ffe088;
+            --surface-container-highest: #333535;
+            --surface-container-low: #1a1c1c;
+        }
+
+        .theme-toggle {
+            width: 2.75rem;
+            height: 2.75rem;
+            border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+            background: color-mix(in srgb, var(--surface-container-high) 88%, transparent);
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary);
+            background: var(--surface-container-highest);
+        }
+
+        .theme-toggle:active { transform: scale(0.95); }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -26,6 +145,36 @@
   --green:   #52B788;
 }
 
+
+html:not(.dark) {
+  --black: #eaf4ff;
+  --surface: #dcecff;
+  --card: #d4e7fb;
+  --card2: #c8ddf2;
+  --border: rgba(47,111,163,0.22);
+  --gold: #b88a12;
+  --gold-d: #7d5d07;
+  --gold-bg: rgba(184,138,18,0.10);
+  --white: #142433;
+  --muted: #405263;
+}
+html:not(.dark) header { background: rgba(234,244,255,0.92); }
+html:not(.dark) .hero-bg { background: linear-gradient(160deg, #f6fbff 0%, #eaf4ff 55%, #cfe3f8 100%); }
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.theme-toggle:hover { border-color: var(--gold); }
+.header-actions { display: flex; align-items: center; gap: 0.8rem; }
 html { scroll-behavior: smooth; }
 body { background: var(--black); color: var(--white); font-family: 'Barlow', sans-serif; overflow-x: hidden; }
 
@@ -151,7 +300,7 @@ h1 em {
 
 .car-card {
   background: var(--card); display: flex; flex-direction: column;
-  transition: background .25s; cursor: pointer; position: relative;
+  height: 100%; transition: background .25s; cursor: pointer; position: relative;
 }
 .car-card:hover { background: #161a1e; }
 
@@ -160,6 +309,7 @@ h1 em {
   display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden;
   border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
 }
 .car-card-visual::before {
   content: '';
@@ -181,17 +331,17 @@ h1 em {
 .avail-badge.limited   { background: rgba(168,184,200,0.12); border: 1px solid rgba(168,184,200,0.3); color: var(--silver); }
 .avail-badge.booked    { background: rgba(224,82,82,0.12);  border: 1px solid rgba(224,82,82,0.3);  color: var(--danger); }
 
-.car-card-body { padding: 1.4rem 1.4rem 1.2rem; flex: 1; display: flex; flex-direction: column; gap: 0.6rem; }
+.car-card-body { padding: 0 1.25rem 1rem; flex: 1; display: flex; flex-direction: column; gap: 0.7rem; }
 .car-model { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--white); }
 .car-variant { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.8rem; color: var(--silver); }
-.car-specs { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.2rem; }
+.car-specs { display: flex; gap: 0.85rem; flex-wrap: wrap; margin-top: 0.2rem; }
 .spec-chip { font-family: 'Barlow Condensed', sans-serif; font-size: 0.55rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 0.3rem; }
 .spec-chip svg { width: 11px; height: 11px; opacity: 0.6; }
 
 .car-card-footer {
-  padding: 0 1.4rem 1.4rem;
+  padding: 0 1.25rem 1.25rem;
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  border-top: 1px solid rgba(168,184,200,0.06); padding-top: 1rem; margin-top: auto;
+  border-top: 1px solid rgba(168,184,200,0.06); padding-top: 0.95rem; margin-top: auto;
 }
 .price-block { display: flex; flex-direction: column; }
 .price-val { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--silver-b); line-height: 1; }
@@ -320,7 +470,7 @@ h1 em {
     <a href="#how-it-works">How it works</a>
     <a href="profile.html">My Bookings</a>
   </nav>
-  <a class="header-cta" href="tel:+254700000000">Call Concierge</a>
+  <div class="header-actions"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode" title="Switch color mode"><span class="material-symbols-outlined">light_mode</span></button><a class="header-cta" href="tel:+254700000000">Call Concierge</a></div>
 </header>
 
 <!-- HERO -->
@@ -411,7 +561,7 @@ h1 em {
   <div class="section-head">
     <div>
       <div class="section-tag">Available Now</div>
-      <div class="section-title">Our Mercedes Fleet</div>
+      <div class="section-title"style="align:center;">Our Mercedes Fleet</div>
     </div>
     <a class="view-all" href="fleet.html">View all models →</a>
   </div>
@@ -426,8 +576,8 @@ h1 em {
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model">AMG GT 63 S</div>
-          <div class="car-variant">4-Door Coupe · 2024</div>
+          <h3 class="car-model">AMG GT 63 S</h3>
+          <p class="car-variant">4-Door Coupe · 2024</p>
         </div>
         <div class="car-specs">
           <span class="spec-chip"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>630 hp</span>
@@ -452,8 +602,8 @@ h1 em {
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model">S-Class S500</div>
-          <div class="car-variant">Long Wheelbase · 2024</div>
+          <h3 class="car-model">S-Class S500</h3>
+          <p class="car-variant">Long Wheelbase · 2024</p>
         </div>
         <div class="car-specs">
           <span class="spec-chip"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>429 hp</span>
@@ -474,12 +624,12 @@ h1 em {
     <div class="car-card">
       <div class="car-card-visual">
         <span class="avail-badge limited">1 Left</span>
-        <img src="https://images.unsplash.com/photo-1625231334168-25eb84e78de2?auto=format&fit=crop&w=1200&q=80" alt="Mercedes G-Wagon G63" />
+        <img src="G-Wagon G63.png" alt="Mercedes G-Wagon G63" />
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model">G-Wagon G63</div>
-          <div class="car-variant">AMG · 2024</div>
+          <h3 class="car-model">G-Wagon G63</h3>
+          <p class="car-variant">AMG · 2024</p>
         </div>
         <div class="car-specs">
           <span class="spec-chip"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>577 hp</span>
@@ -500,12 +650,12 @@ h1 em {
     <div class="car-card">
       <div class="car-card-visual">
         <span class="avail-badge available">Available</span>
-        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=1200&q=80" alt="Mercedes-Maybach S 680" />
+        <img src="Maybach S 680.png" alt="Mercedes-Maybach S 680" />
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model">Maybach S 680</div>
-          <div class="car-variant">First Class · 2024</div>
+          <h3 class="car-model">Maybach S 680</h3>
+          <p class="car-variant">First Class · 2024</p>
         </div>
         <div class="car-specs">
           <span class="spec-chip"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>621 hp V12</span>
@@ -526,12 +676,12 @@ h1 em {
     <div class="car-card">
       <div class="car-card-visual">
         <span class="avail-badge limited">1 Left</span>
-        <img src="https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=1200&q=80" alt="Mercedes GLE Coupe" />
+        <img src="GLE 53 Coupe.png" alt="Mercedes GLE Coupe" />
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model">GLE 53 Coupe</div>
-          <div class="car-variant">AMG · 2024</div>
+          <h3 class="car-model">GLE 53 Coupe</h3>
+          <p class="car-variant">AMG · 2024</p>
         </div>
         <div class="car-specs">
           <span class="spec-chip"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>429 hp</span>
@@ -556,8 +706,8 @@ h1 em {
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model" style="opacity:0.5">C300 AMG Line</div>
-          <div class="car-variant" style="opacity:0.5">Sport · 2024</div>
+          <h3 class="car-model" style="opacity:0.5">C300 AMG Line</h3>
+          <p class="car-variant" style="opacity:0.5">Sport · 2024</p>
         </div>
         <div class="car-specs">
           <span class="spec-chip" style="opacity:0.45"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>255 hp</span>
@@ -660,5 +810,36 @@ h1 em {
   </a>
 </nav>
 
+<script>
+    (() => {
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('luxdrive-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const useDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+        root.classList.toggle('dark', useDark);
+
+        const syncToggle = () => {
+            const isDark = root.classList.contains('dark');
+            document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+                button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                button.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                const icon = button.querySelector('.material-symbols-outlined');
+                if (icon) icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            syncToggle();
+            document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const nextIsDark = !root.classList.contains('dark');
+                    root.classList.toggle('dark', nextIsDark);
+                    localStorage.setItem('luxdrive-theme', nextIsDark ? 'dark' : 'light');
+                    syncToggle();
+                });
+            });
+        });
+    })();
+</script>
 </body>
 </html>

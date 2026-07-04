@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Jaguar F-PACE SUV</title>
+  <desc id="desc">Stylized side profile SVG illustration of a Jaguar F-PACE luxury SUV.</desc>
+  <defs>
+    <linearGradient id="body" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f3f6f7"/>
+      <stop offset="0.45" stop-color="#9fa8ad"/>
+      <stop offset="1" stop-color="#353b40"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1">
+      <stop offset="0" stop-color="#27313a"/>
+      <stop offset="1" stop-color="#11171d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="#0e0e0e"/>
+  <path d="M140 492c95 46 806 51 927 0" fill="none" stroke="#1b1f23" stroke-width="32" stroke-linecap="round"/>
+  <g filter="url(#shadow)">
+    <path d="M174 401c25-62 82-95 173-107 53-78 145-122 269-126 152-4 261 37 343 126 62 10 105 32 129 67 24 35 29 75 14 119H943c-12-55-56-91-114-91s-103 36-115 91H472c-12-55-56-91-114-91s-103 36-115 91h-82c-7-28-3-54 13-79z" fill="url(#body)"/>
+    <path d="M383 286c51-58 128-88 231-91 110-3 193 25 251 91H383z" fill="url(#glass)"/>
+    <path d="M428 275c45-36 105-55 180-57l-12 68H393c9-4 20-8 35-11z" fill="#202a32"/>
+    <path d="M635 218c83 3 146 25 190 68H618l17-68z" fill="#141b21"/>
+    <path d="M213 398h121c34-33 76-50 126-50h383c53 0 96 17 130 50h82c-17-36-55-59-112-69H338c-61 7-103 30-125 69z" fill="#d7dddf" opacity="0.55"/>
+    <path d="M969 389c39 9 66 29 82 60h-74c-8-22-21-41-39-56 11-4 21-5 31-4z" fill="#c92b33"/>
+    <path d="M203 421h65c-12 16-20 35-25 59h-82c-4-21 10-42 42-59z" fill="#20262a"/>
+    <circle cx="358" cy="482" r="73" fill="#111"/>
+    <circle cx="358" cy="482" r="43" fill="#cfd5d8"/>
+    <circle cx="358" cy="482" r="18" fill="#1b2024"/>
+    <circle cx="829" cy="482" r="73" fill="#111"/>
+    <circle cx="829" cy="482" r="43" fill="#cfd5d8"/>
+    <circle cx="829" cy="482" r="18" fill="#1b2024"/>
+    <path d="M500 321h235" stroke="#23282c" stroke-width="5" stroke-linecap="round"/>
+    <path d="M770 321h62" stroke="#23282c" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

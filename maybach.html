@@ -3,9 +3,128 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jaguar Hire | LUXDRIVE</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+<title>Maybach Hire | LUXDRIVE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Barlow+Condensed:wght@300;400;500;600;700;800&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
+        :root {
+            --secondary-container: #d9e6f7;
+            --tertiary-fixed-dim: #c9d4df;
+            --on-secondary: #1d3046;
+            --background: #eaf4ff;
+            --tertiary-fixed: #edf4fb;
+            --on-tertiary-fixed-variant: #425465;
+            --error: #b3261e;
+            --primary: #b88a12;
+            --surface-tint: #2f6fa3;
+            --on-error: #ffffff;
+            --on-primary: #241a00;
+            --error-container: #f9dedc;
+            --surface-container-lowest: #f8fbff;
+            --inverse-surface: #26323d;
+            --secondary-fixed-dim: #c6d8ee;
+            --surface-container: #dcecff;
+            --on-primary-container: #3d2d00;
+            --on-surface: #142433;
+            --on-secondary-fixed-variant: #40556d;
+            --primary-fixed-dim: #d4a72d;
+            --surface: #eaf4ff;
+            --primary-container: #f1c95a;
+            --on-tertiary-fixed: #182633;
+            --on-primary-fixed-variant: #5c4400;
+            --surface-variant: #c8dbef;
+            --on-secondary-container: #34485e;
+            --surface-dim: #cfe3f8;
+            --on-secondary-fixed: #102235;
+            --surface-bright: #f6fbff;
+            --inverse-on-surface: #eaf4ff;
+            --tertiary-container: #d6e3ee;
+            --secondary: #4b6f91;
+            --inverse-primary: #ffe088;
+            --surface-container-high: #d4e7fb;
+            --on-surface-variant: #405263;
+            --tertiary: #52687b;
+            --on-tertiary-container: #334656;
+            --on-error-container: #410002;
+            --on-background: #142433;
+            --on-primary-fixed: #211600;
+            --outline-variant: #a9bfd4;
+            --secondary-fixed: #e1efff;
+            --outline: #6f8499;
+            --on-tertiary: #ffffff;
+            --primary-fixed: #ffe39a;
+            --surface-container-highest: #c8ddf2;
+            --surface-container-low: #e3f0ff;
+        }
+
+        .dark {
+            --secondary-container: #424862;
+            --tertiary-fixed-dim: #c8c6c5;
+            --on-secondary: #292f48;
+            --background: #121414;
+            --tertiary-fixed: #e5e2e1;
+            --on-tertiary-fixed-variant: #474646;
+            --error: #ffb4ab;
+            --primary: #f2ca50;
+            --surface-tint: #e9c349;
+            --on-error: #690005;
+            --on-primary: #3c2f00;
+            --error-container: #93000a;
+            --surface-container-lowest: #0c0f0f;
+            --inverse-surface: #e2e2e2;
+            --secondary-fixed-dim: #bfc5e4;
+            --surface-container: #1e2020;
+            --on-primary-container: #554300;
+            --on-surface: #e2e2e2;
+            --on-secondary-fixed-variant: #3f465f;
+            --primary-fixed-dim: #e9c349;
+            --surface: #121414;
+            --primary-container: #d4af37;
+            --on-tertiary-fixed: #1c1b1b;
+            --on-primary-fixed-variant: #574500;
+            --surface-variant: #333535;
+            --on-secondary-container: #b1b7d6;
+            --surface-dim: #121414;
+            --on-secondary-fixed: #141a32;
+            --surface-bright: #37393a;
+            --inverse-on-surface: #2f3131;
+            --tertiary-container: #b5b2b2;
+            --secondary: #bfc5e4;
+            --inverse-primary: #735c00;
+            --surface-container-high: #282a2b;
+            --on-surface-variant: #d0c5af;
+            --tertiary: #d0cecd;
+            --on-tertiary-container: #454545;
+            --on-error-container: #ffdad6;
+            --on-background: #e2e2e2;
+            --on-primary-fixed: #241a00;
+            --outline-variant: #4d4635;
+            --secondary-fixed: #dce1ff;
+            --outline: #99907c;
+            --on-tertiary: #313030;
+            --primary-fixed: #ffe088;
+            --surface-container-highest: #333535;
+            --surface-container-low: #1a1c1c;
+        }
+
+        .theme-toggle {
+            width: 2.75rem;
+            height: 2.75rem;
+            border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+            background: color-mix(in srgb, var(--surface-container-high) 88%, transparent);
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary);
+            background: var(--surface-container-highest);
+        }
+
+        .theme-toggle:active { transform: scale(0.95); }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -25,6 +144,39 @@
   --gold:    #A08B5A;
 }
 
+
+html:not(.dark) {
+  --black: #eaf4ff;
+  --surface: #dcecff;
+  --card: #d4e7fb;
+  --card2: #c8ddf2;
+  --border: rgba(47,111,163,0.22);
+  --gold: #b88a12;
+  --green: #4b7f66;
+  --green-b: #2f6f58;
+  --green-d: #315846;
+  --green-bg: rgba(47,111,88,0.10);
+  --silver: #405263;
+  --white: #142433;
+  --muted: #405263;
+}
+html:not(.dark) header { background: rgba(234,244,255,0.92); }
+html:not(.dark) .hero-bg { background: linear-gradient(160deg, #f6fbff 0%, #eaf4ff 55%, #cfe3f8 100%); }
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.theme-toggle:hover { border-color: var(--gold); }
+.header-actions { display: flex; align-items: center; gap: 0.8rem; }
 html { scroll-behavior: smooth; }
 body { background: var(--black); color: var(--white); font-family: 'Barlow', sans-serif; overflow-x: hidden; }
 
@@ -254,7 +406,7 @@ h1 em {
   position: relative;
 }
 .cta-banner::before {
-  content: 'JAGUAR';
+  content: 'MAYBACH';
   position: absolute; right: -1%; top: 50%; transform: translateY(-50%);
   font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
   font-size: clamp(4rem, 15vw, 12rem);
@@ -330,7 +482,7 @@ h1 em {
     <a href="#how-it-works">How it works</a>
     <a href="profile.html">My Bookings</a>
   </nav>
-  <a class="header-cta" href="tel:+254700000000">Call Concierge</a>
+  <div class="header-actions"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode" title="Switch color mode"><span class="material-symbols-outlined">light_mode</span></button><a class="header-cta" href="tel:+254700000000">Call Concierge</a></div>
 </header>
 
 <!-- HERO -->
@@ -340,14 +492,14 @@ h1 em {
   <div class="hero-inner">
     <div class="hero-eyebrow">
       <span class="eyebrow-line"></span>
-      <span class="eyebrow-text">Jaguar · Luxury Car Hire · Nairobi</span>
+      <span class="eyebrow-text">Maybach � Luxury Car Hire � Nairobi</span>
     </div>
     <h1>
-      Drive Jaguar
-      <em>born to perform</em>
+      Drive Maybach
+      <em>the pinnacle of comfort</em>
     </h1>
     <p class="hero-sub">
-      Choose your Jaguar, set your dates, and we deliver it ready to roar. Hourly, daily, or weekly rates — no hidden costs, pure British luxury.
+      Choose your Maybach, set your dates, and we deliver it ready to impress. Hourly, daily, or weekly rates � no hidden costs, pure executive luxury.
     </p>
   </div>
 
@@ -376,13 +528,13 @@ h1 em {
       <div class="field">
         <span class="field-label">Model</span>
         <select>
-          <option>Any Jaguar</option>
-          <option>Jaguar F-Type</option>
-          <option>Jaguar XE</option>
-          <option>Jaguar XF</option>
-          <option>Jaguar F-Pace</option>
-          <option>Jaguar E-Pace</option>
-          <option>Jaguar I-Pace</option>
+          <option>Any Maybach</option>
+          <option>Mercedes-Maybach S-Class</option>
+          <option>Mercedes-Maybach EQS SUV</option>
+          <option>Mercedes-Maybach S 580</option>
+          <option>Mercedes-Maybach GLS</option>
+          <option>Mercedes-Maybach Pullman</option>
+          <option>Mercedes-Maybach Night Series</option>
         </select>
       </div>
       <button class="book-btn" onclick="alert('Checking availability…')">
@@ -422,7 +574,7 @@ h1 em {
   <div class="section-head">
     <div>
       <div class="section-tag">Available Now</div>
-      <div class="section-title">Our Jaguar Fleet</div>
+      <div class="section-title">Our Maybach Fleet</div>
     </div>
     <a class="view-all" href="fleet.html">View all models →</a>
   </div>
@@ -433,11 +585,11 @@ h1 em {
     <div class="car-card">
       <div class="car-card-visual">
         <span class="avail-badge available">Available</span>
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&q=85&fit=crop&auto=format" alt="Jaguar F-Type R" onerror="this.style.display='none'" />
+        <img src="Mercedes-Maybach S 680.png" alt="Mercedes-Maybach S 680" onerror="this.style.display='none'" />
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model">Jaguar F-Type R</div>
+          <div class="car-model">Mercedes-Maybach S 680</div>
           <div class="car-variant">Coupé · 2024</div>
         </div>
         <div class="car-specs">
@@ -459,11 +611,11 @@ h1 em {
     <div class="car-card">
       <div class="car-card-visual">
         <span class="avail-badge available">Available</span>
-        <img src="https://images.unsplash.com/photo-1519245659620-e859806a8d3b?w=900&q=85&fit=crop&auto=format" alt="Jaguar F-Pace SVR" onerror="this.style.display='none'" />
+        <img src="Mercedes-Maybach GLS 600.png" alt="Mercedes-Maybach GLS 600" onerror="this.style.display='none'" />
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model">Jaguar F-Pace SVR</div>
+          <div class="car-model">Mercedes-Maybach GLS 600</div>
           <div class="car-variant">Performance SUV · 2023</div>
         </div>
         <div class="car-specs">
@@ -485,11 +637,11 @@ h1 em {
     <div class="car-card">
       <div class="car-card-visual">
         <span class="avail-badge limited">2 Left</span>
-        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=85&fit=crop&auto=format" alt="Jaguar XF" onerror="this.style.display='none'" />
+        <img src="Mercedes-Maybach S 580.png" alt="Mercedes-Maybach S 580" onerror="this.style.display='none'" />
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model">Jaguar XF</div>
+          <div class="car-model">Mercedes-Maybach S 580</div>
           <div class="car-variant">R-Dynamic · 2023</div>
         </div>
         <div class="car-specs">
@@ -511,11 +663,11 @@ h1 em {
     <div class="car-card">
       <div class="car-card-visual">
         <span class="avail-badge available">Available</span>
-        <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?w=900&q=85&fit=crop&auto=format" alt="Jaguar XE" onerror="this.style.display='none'" />
+        <img src="Mercedes-Maybach EQS SUV.png" alt="Mercedes-Maybach EQS SUV" onerror="this.style.display='none'" />
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model">Jaguar XE</div>
+          <div class="car-model">Mercedes-Maybach EQS SUV</div>
           <div class="car-variant">R-Dynamic S · 2024</div>
         </div>
         <div class="car-specs">
@@ -537,11 +689,12 @@ h1 em {
     <div class="car-card">
       <div class="car-card-visual">
         <span class="avail-badge limited">1 Left</span>
-        <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=900&q=85&fit=crop&auto=format" alt="Jaguar I-Pace" onerror="this.style.display='none'" />
+        <img src="Mercedes-Maybach Night Series.png" alt="Mercedes-Maybach Night Series" onerror="this.style.display='none'" />
       </div>
+      <div style="min-height: 1in; min-width: 100%"></div> 
       <div class="car-card-body">
         <div>
-          <div class="car-model">Jaguar I-Pace</div>
+          <div class="car-model">Mercedes-Maybach Night Series</div>
           <div class="car-variant">HSE · Electric · 2024</div>
         </div>
         <div class="car-specs">
@@ -563,11 +716,11 @@ h1 em {
     <div class="car-card">
       <div class="car-card-visual">
         <span class="avail-badge booked">Booked Today</span>
-        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=900&q=85&fit=crop&auto=format" alt="Jaguar E-Pace" onerror="this.style.display='none'" />
+        <img src="Mercedes-Maybach Pullman.png" alt="Mercedes-Maybach Pullman" onerror="this.style.display='none'" />
       </div>
       <div class="car-card-body">
         <div>
-          <div class="car-model" style="opacity:0.5">Jaguar E-Pace</div>
+          <div class="car-model" style="opacity:0.5">Mercedes-Maybach Pullman</div>
           <div class="car-variant" style="opacity:0.5">R-Dynamic · 2023</div>
         </div>
         <div class="car-specs">
@@ -612,7 +765,7 @@ h1 em {
         <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
       </div>
       <div class="step-title">Select a Model</div>
-      <div class="step-desc">Browse available Jaguar models — from the sporty XE to the ferocious F-Type R — and pick your perfect match.</div>
+      <div class="step-desc">Browse available Maybach models � from the S-Class to the GLS 600 � and pick your perfect match.</div>
       <div class="step-connector"></div>
     </div>
     <div class="how-step">
@@ -640,7 +793,7 @@ h1 em {
   <div>
     <div class="cta-tag">LUXDRIVE Concierge</div>
     <div class="cta-title">Need help choosing? <em>We'll sort it.</em></div>
-    <p class="cta-body">Our team is on call 24/7. Tell us your dates, budget, and occasion — we'll match you with the right Jaguar.</p>
+    <p class="cta-body">Our team is on call 24/7. Tell us your dates, budget, and occasion — we'll match you with the right Maybach.</p>
   </div>
   <div class="cta-actions">
     <a class="btn-primary" href="tel:+254700000000">
@@ -671,5 +824,36 @@ h1 em {
   </a>
 </nav>
 
+<script>
+    (() => {
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('luxdrive-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const useDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+        root.classList.toggle('dark', useDark);
+
+        const syncToggle = () => {
+            const isDark = root.classList.contains('dark');
+            document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+                button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                button.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                const icon = button.querySelector('.material-symbols-outlined');
+                if (icon) icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            syncToggle();
+            document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const nextIsDark = !root.classList.contains('dark');
+                    root.classList.toggle('dark', nextIsDark);
+                    localStorage.setItem('luxdrive-theme', nextIsDark ? 'dark' : 'light');
+                    syncToggle();
+                });
+            });
+        });
+    })();
+</script>
 </body>
 </html>

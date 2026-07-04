@@ -1,131 +1,290 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>LUXDRIVE | Booking Concierge</title>
+<meta name="description" content="Book your luxury vehicle with LUXDRIVE's concierge service. Choose from Rolls-Royce, Bentley, Maybach, and more."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind Theme Configuration -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "secondary-container": "#424862",
-                "tertiary-fixed-dim": "#c8c6c5",
-                "on-secondary": "#292f48",
-                "background": "#121414",
-                "tertiary-fixed": "#e5e2e1",
-                "on-tertiary-fixed-variant": "#474646",
-                "error": "#ffb4ab",
-                "primary": "#f2ca50",
-                "surface-tint": "#e9c349",
-                "on-error": "#690005",
-                "on-primary": "#3c2f00",
-                "error-container": "#93000a",
-                "surface-container-lowest": "#0c0f0f",
-                "inverse-surface": "#e2e2e2",
-                "secondary-fixed-dim": "#bfc5e4",
-                "surface-container": "#1e2020",
-                "on-primary-container": "#554300",
-                "on-surface": "#e2e2e2",
-                "on-secondary-fixed-variant": "#3f465f",
-                "primary-fixed-dim": "#e9c349",
-                "surface": "#121414",
-                "primary-container": "#d4af37",
-                "on-tertiary-fixed": "#1c1b1b",
-                "on-primary-fixed-variant": "#574500",
-                "surface-variant": "#333535",
-                "on-secondary-container": "#b1b7d6",
-                "surface-dim": "#121414",
-                "on-secondary-fixed": "#141a32",
-                "surface-bright": "#37393a",
-                "inverse-on-surface": "#2f3131",
-                "tertiary-container": "#b5b2b2",
-                "secondary": "#bfc5e4",
-                "inverse-primary": "#735c00",
-                "surface-container-high": "#282a2b",
-                "on-surface-variant": "#d0c5af",
-                "tertiary": "#d0cecd",
-                "on-tertiary-container": "#454545",
-                "on-error-container": "#ffdad6",
-                "on-background": "#e2e2e2",
-                "on-primary-fixed": "#241a00",
-                "outline-variant": "#4d4635",
-                "secondary-fixed": "#dce1ff",
-                "outline": "#99907c",
-                "on-tertiary": "#313030",
-                "primary-fixed": "#ffe088",
-                "surface-container-highest": "#333535",
-                "surface-container-low": "#1a1c1c"
-            },
-            "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-            },
-            "spacing": {
-                "margin-tablet": "40px",
-                "margin-mobile": "20px",
-                "gutter": "24px",
-                "margin-desktop": "80px",
-                "section-gap": "120px",
-                "container-max": "1440px"
-            },
-            "fontFamily": {
-                "body-md": ["Montserrat"],
-                "headline-lg": ["Playfair Display"],
-                "display-lg-mobile": ["Playfair Display"],
-                "label-md": ["Montserrat"],
-                "headline-lg-mobile": ["Playfair Display"],
-                "label-caps": ["Montserrat"],
-                "body-lg": ["Montserrat"],
-                "headline-xl": ["Playfair Display"],
-                "display-lg": ["Playfair Display"]
-            },
-            "fontSize": {
-                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
-                "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
-                "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "600"}],
-                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
-                "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
-                "headline-xl": ["60px", {"lineHeight": "72px", "fontWeight": "600"}],
-                "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
-            }
-          },
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+            "secondary-container": "var(--secondary-container)",
+            "tertiary-fixed-dim": "var(--tertiary-fixed-dim)",
+            "on-secondary": "var(--on-secondary)",
+            "background": "var(--background)",
+            "tertiary-fixed": "var(--tertiary-fixed)",
+            "on-tertiary-fixed-variant": "var(--on-tertiary-fixed-variant)",
+            "error": "var(--error)",
+            "primary": "var(--primary)",
+            "surface-tint": "var(--surface-tint)",
+            "on-error": "var(--on-error)",
+            "on-primary": "var(--on-primary)",
+            "error-container": "var(--error-container)",
+            "surface-container-lowest": "var(--surface-container-lowest)",
+            "inverse-surface": "var(--inverse-surface)",
+            "secondary-fixed-dim": "var(--secondary-fixed-dim)",
+            "surface-container": "var(--surface-container)",
+            "on-primary-container": "var(--on-primary-container)",
+            "on-surface": "var(--on-surface)",
+            "on-secondary-fixed-variant": "var(--on-secondary-fixed-variant)",
+            "primary-fixed-dim": "var(--primary-fixed-dim)",
+            "surface": "var(--surface)",
+            "primary-container": "var(--primary-container)",
+            "on-tertiary-fixed": "var(--on-tertiary-fixed)",
+            "on-primary-fixed-variant": "var(--on-primary-fixed-variant)",
+            "surface-variant": "var(--surface-variant)",
+            "on-secondary-container": "var(--on-secondary-container)",
+            "surface-dim": "var(--surface-dim)",
+            "on-secondary-fixed": "var(--on-secondary-fixed)",
+            "surface-bright": "var(--surface-bright)",
+            "inverse-on-surface": "var(--inverse-on-surface)",
+            "tertiary-container": "var(--tertiary-container)",
+            "secondary": "var(--secondary)",
+            "inverse-primary": "var(--inverse-primary)",
+            "surface-container-high": "var(--surface-container-high)",
+            "on-surface-variant": "var(--on-surface-variant)",
+            "tertiary": "var(--tertiary)",
+            "on-tertiary-container": "var(--on-tertiary-container)",
+            "on-error-container": "var(--on-error-container)",
+            "on-background": "var(--on-background)",
+            "on-primary-fixed": "var(--on-primary-fixed)",
+            "outline-variant": "var(--outline-variant)",
+            "secondary-fixed": "var(--secondary-fixed)",
+            "outline": "var(--outline)",
+            "on-tertiary": "var(--on-tertiary)",
+            "primary-fixed": "var(--primary-fixed)",
+            "surface-container-highest": "var(--surface-container-highest)",
+            "surface-container-low": "var(--surface-container-low)"
         },
-      }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+        },
+        "spacing": {
+            "margin-tablet": "40px",
+            "margin-mobile": "20px",
+            "gutter": "24px",
+            "margin-desktop": "80px",
+            "section-gap": "120px",
+            "container-max": "1440px"
+        },
+        "fontFamily": {
+            "body-md": ["Montserrat"],
+            "headline-lg": ["Playfair Display"],
+            "display-lg-mobile": ["Playfair Display"],
+            "label-md": ["Montserrat"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "label-caps": ["Montserrat"],
+            "body-lg": ["Montserrat"],
+            "headline-xl": ["Playfair Display"],
+            "display-lg": ["Playfair Display"]
+        },
+        "fontSize": {
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+            "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+            "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "600"}],
+            "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+            "headline-xl": ["60px", {"lineHeight": "72px", "fontWeight": "600"}],
+            "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
         }
-        ::-webkit-scrollbar { width: 4px; height: 4px; }
-        ::-webkit-scrollbar-thumb { background: #f2ca50; border-radius: 10px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      },
+    },
+  }
+</script>
+<style>
+        :root {
+            --secondary-container: #d9e6f7;
+            --tertiary-fixed-dim: #c9d4df;
+            --on-secondary: #1d3046;
+            --background: #eaf4ff;
+            --tertiary-fixed: #edf4fb;
+            --on-tertiary-fixed-variant: #425465;
+            --error: #b3261e;
+            --primary: #b88a12;
+            --surface-tint: #2f6fa3;
+            --on-error: #ffffff;
+            --on-primary: #241a00;
+            --error-container: #f9dedc;
+            --surface-container-lowest: #f8fbff;
+            --inverse-surface: #26323d;
+            --secondary-fixed-dim: #c6d8ee;
+            --surface-container: #dcecff;
+            --on-primary-container: #3d2d00;
+            --on-surface: #142433;
+            --on-secondary-fixed-variant: #40556d;
+            --primary-fixed-dim: #d4a72d;
+            --surface: #eaf4ff;
+            --primary-container: #f1c95a;
+            --on-tertiary-fixed: #182633;
+            --on-primary-fixed-variant: #5c4400;
+            --surface-variant: #c8dbef;
+            --on-secondary-container: #34485e;
+            --surface-dim: #cfe3f8;
+            --on-secondary-fixed: #102235;
+            --surface-bright: #f6fbff;
+            --inverse-on-surface: #eaf4ff;
+            --tertiary-container: #d6e3ee;
+            --secondary: #4b6f91;
+            --inverse-primary: #ffe088;
+            --surface-container-high: #d4e7fb;
+            --on-surface-variant: #405263;
+            --tertiary: #52687b;
+            --on-tertiary-container: #334656;
+            --on-error-container: #410002;
+            --on-background: #142433;
+            --on-primary-fixed: #211600;
+            --outline-variant: #a9bfd4;
+            --secondary-fixed: #e1efff;
+            --outline: #6f8499;
+            --on-tertiary: #ffffff;
+            --primary-fixed: #ffe39a;
+            --surface-container-highest: #c8ddf2;
+            --surface-container-low: #e3f0ff;
+        }
 
-        .shimmer-hover:hover {
-            background: linear-gradient(90deg, rgba(242,202,80,1) 0%, rgba(255,255,255,0.8) 50%, rgba(242,202,80,1) 100%);
-            background-size: 200% auto;
-            animation: shimmer 1.5s infinite;
+        .dark {
+            --secondary-container: #424862;
+            --tertiary-fixed-dim: #c8c6c5;
+            --on-secondary: #292f48;
+            --background: #121414;
+            --tertiary-fixed: #e5e2e1;
+            --on-tertiary-fixed-variant: #474646;
+            --error: #ffb4ab;
+            --primary: #f2ca50;
+            --surface-tint: #e9c349;
+            --on-error: #690005;
+            --on-primary: #3c2f00;
+            --error-container: #93000a;
+            --surface-container-lowest: #0c0f0f;
+            --inverse-surface: #e2e2e2;
+            --secondary-fixed-dim: #bfc5e4;
+            --surface-container: #1e2020;
+            --on-primary-container: #554300;
+            --on-surface: #e2e2e2;
+            --on-secondary-fixed-variant: #3f465f;
+            --primary-fixed-dim: #e9c349;
+            --surface: #121414;
+            --primary-container: #d4af37;
+            --on-tertiary-fixed: #1c1b1b;
+            --on-primary-fixed-variant: #574500;
+            --surface-variant: #333535;
+            --on-secondary-container: #b1b7d6;
+            --surface-dim: #121414;
+            --on-secondary-fixed: #141a32;
+            --surface-bright: #37393a;
+            --inverse-on-surface: #2f3131;
+            --tertiary-container: #b5b2b2;
+            --secondary: #bfc5e4;
+            --inverse-primary: #735c00;
+            --surface-container-high: #282a2b;
+            --on-surface-variant: #d0c5af;
+            --tertiary: #d0cecd;
+            --on-tertiary-container: #454545;
+            --on-error-container: #ffdad6;
+            --on-background: #e2e2e2;
+            --on-primary-fixed: #241a00;
+            --outline-variant: #4d4635;
+            --secondary-fixed: #dce1ff;
+            --outline: #99907c;
+            --on-tertiary: #313030;
+            --primary-fixed: #ffe088;
+            --surface-container-highest: #333535;
+            --surface-container-low: #1a1c1c;
         }
-        @keyframes shimmer { to { background-position: 200% center; } }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
+
+        .theme-toggle {
+            width: 2.75rem;
+            height: 2.75rem;
+            border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+            background: color-mix(in srgb, var(--surface-container-high) 88%, transparent);
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary);
+            background: var(--surface-container-highest);
+        }
+
+        .theme-toggle:active { transform: scale(0.95); }
+.material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
     }
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .shimmer-hover:hover {
+        background: linear-gradient(90deg, var(--primary) 0%, color-mix(in srgb, var(--surface-bright) 80%, transparent) 50%, var(--primary) 100%);
+        background-size: 200% auto;
+        animation: shimmer 1.5s infinite;
+    }
+    @keyframes shimmer { to { background-position: 200% center; } }
+
+    /* Field error state */
+    .field-error {
+        border-color: var(--error) !important;
+        box-shadow: 0 0 0 1px var(--error)33;
+    }
+    .field-error-msg {
+        color: var(--error);
+        font-size: 11px;
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .field-ok {
+        border-color: color-mix(in srgb, var(--primary) 50%, transparent) !important;
+    }
+
+    /* Success modal */
+    #successModal {
+        display: none;
+        position: fixed; inset: 0; z-index: 999;
+        background: rgba(0,0,0,0.85);
+        backdrop-filter: blur(8px);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    #successModal.visible { display: flex; }
+
+    @keyframes modalIn {
+        from { opacity: 0; transform: scale(0.92) translateY(20px); }
+        to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    #successModalCard { animation: modalIn 0.35s cubic-bezier(.22,.68,0,1.2) both; }
+
+    /* Input focus ring */
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: var(--primary) !important;
+        box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 20%, transparent);
+    }
+</style>
+<style>
+body { min-height: max(884px, 100dvh); }
 </style>
 </head>
 <body class="bg-background text-on-background selection:bg-primary/30 selection:text-primary">
+
 <!-- Top Navigation Bar -->
 <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-primary/15 shadow-2xl flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
 <div class="flex items-center gap-4">
@@ -139,9 +298,11 @@
 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors duration-300" href="profile.html">VIP HUB</a>
 </nav>
 </div>
+<div class="flex items-center gap-3"><button class="theme-toggle rounded-lg" type="button" data-theme-toggle aria-label="Switch color mode" title="Switch color mode"><span class="material-symbols-outlined">light_mode</span></button>
 <a class="bg-primary text-on-primary font-label-caps text-[10px] tracking-widest px-6 py-2 shimmer-hover transition-all active:scale-95 flex items-center justify-center" href="booking.html">
-            CONCIERGE
-        </a>
+    CONCIERGE
+</a>
+</div>
 </header>
 
 <main class="pt-24 pb-32">
@@ -149,89 +310,195 @@
 <section class="px-margin-mobile md:px-margin-desktop mb-16">
 <div class="max-w-4xl mx-auto">
 <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">Concierge Booking</h1>
-<p class="font-body-lg text-on-surface-variant mb-8 max-w-2xl">Connect with our elite concierge team to arrange your luxury vehicle. Browse our exclusive fleet or complete your booking details below.</p>
+<p class="font-body-lg text-on-surface-variant mb-8 max-w-2xl">Connect with our elite concierge team to arrange your luxury vehicle. Complete your booking details below — we'll confirm within the hour.</p>
 </div>
 </section>
 
 <!-- Booking Form Section -->
 <section class="px-margin-mobile md:px-margin-desktop mb-16">
 <div class="max-w-2xl mx-auto bg-surface-container-high border border-primary/10 rounded-xl p-8 shadow-2xl backdrop-blur-md">
-<form class="space-y-6">
-<!-- Personal Information -->
-<div class="space-y-4">
-<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Your Details</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<input type="text" placeholder="Full Name" class="bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-primary focus:ring-1"/>
-<input type="email" placeholder="Email Address" class="bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-primary focus:ring-1"/>
-<input type="tel" placeholder="Phone Number" class="bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-primary focus:ring-1"/>
-<input type="text" placeholder="VIP Membership ID (Optional)" class="bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-primary focus:ring-1"/>
-</div>
-</div>
+<form id="bookingForm" class="space-y-6" novalidate>
 
-<!-- Booking Details -->
-<div class="space-y-4 border-t border-outline-variant/30 pt-6">
-<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Booking Details</h3>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<input type="date" placeholder="Pick-up Date" class="bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-primary focus:ring-1"/>
-<input type="date" placeholder="Return Date" class="bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-primary focus:ring-1"/>
-<input type="text" placeholder="Pick-up Location" class="bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-primary focus:ring-1"/>
-<input type="text" placeholder="Return Location" class="bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-primary focus:ring-1"/>
-</div>
-</div>
+  <!-- Personal Information -->
+  <div class="space-y-4">
+    <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Your Details</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-<!-- Vehicle Selection -->
-<div class="space-y-4 border-t border-outline-variant/30 pt-6">
-<div class="flex justify-between items-center">
-<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Select Vehicle</h3>
-<a href="fleet.html" class="text-primary font-label-caps text-label-caps hover:text-primary-fixed transition-colors flex items-center gap-2">
-<span>VIEW FLEET</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</a>
-</div>
-<select class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface focus:border-primary focus:ring-primary focus:ring-1">
-<option class="text-on-surface">Select a vehicle from our fleet...</option>
-<option>Rolls-Royce Phantom</option>
-<option>Bentley Flying Spur</option>
-<option>Mercedes Maybach</option>
-<option>Other</option>
-</select>
-</div>
+      <div>
+        <label for="fullName" class="block text-[11px] font-label-caps text-on-surface-variant mb-1 tracking-[0.1em]">FULL NAME <span class="text-error">*</span></label>
+        <input id="fullName" type="text" placeholder="e.g. James Worthington" autocomplete="name"
+          class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 transition-all"/>
+        <div id="fullName-err" class="field-error-msg hidden"><span class="material-symbols-outlined text-[14px]">error</span><span></span></div>
+      </div>
 
-<!-- Additional Options -->
-<div class="space-y-4 border-t border-outline-variant/30 pt-6">
-<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Additional Services</h3>
-<div class="space-y-3">
-<label class="flex items-center gap-3 cursor-pointer">
-<input type="checkbox" class="w-4 h-4 border border-outline-variant/30 rounded bg-surface-container checked:bg-primary checked:border-primary"/>
-<span class="text-on-surface font-body-md">Chauffeur Service</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer">
-<input type="checkbox" class="w-4 h-4 border border-outline-variant/30 rounded bg-surface-container checked:bg-primary checked:border-primary"/>
-<span class="text-on-surface font-body-md">Airport Concierge</span>
-</label>
-<label class="flex items-center gap-3 cursor-pointer">
-<input type="checkbox" class="w-4 h-4 border border-outline-variant/30 rounded bg-surface-container checked:bg-primary checked:border-primary"/>
-<span class="text-on-surface font-body-md">Premium Insurance</span>
-</label>
-</div>
-</div>
+      <div>
+        <label for="email" class="block text-[11px] font-label-caps text-on-surface-variant mb-1 tracking-[0.1em]">EMAIL ADDRESS <span class="text-error">*</span></label>
+        <input id="email" type="email" placeholder="you@example.com" autocomplete="email"
+          class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 transition-all"/>
+        <div id="email-err" class="field-error-msg hidden"><span class="material-symbols-outlined text-[14px]">error</span><span></span></div>
+      </div>
 
-<!-- Submit Buttons -->
-<div class="flex flex-col md:flex-row gap-4 border-t border-outline-variant/30 pt-6">
-<button type="submit" class="flex-1 bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 shimmer-hover transition-all active:scale-95">
-CONFIRM BOOKING
-</button>
-<a href="fleet.html" class="flex-1 border border-primary/30 text-primary font-label-caps text-label-caps px-8 py-4 transition-colors hover:border-primary text-center flex items-center justify-center">
-BROWSE FLEET
-</a>
-</div>
+      <div>
+        <label for="phone" class="block text-[11px] font-label-caps text-on-surface-variant mb-1 tracking-[0.1em]">PHONE NUMBER <span class="text-error">*</span></label>
+        <input id="phone" type="tel" placeholder="+1 555 000 0000" autocomplete="tel"
+          class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 transition-all"/>
+        <div id="phone-err" class="field-error-msg hidden"><span class="material-symbols-outlined text-[14px]">error</span><span></span></div>
+      </div>
+
+      <div>
+        <label for="vipId" class="block text-[11px] font-label-caps text-on-surface-variant mb-1 tracking-[0.1em]">VIP MEMBERSHIP ID <span class="text-on-surface-variant/40">(Optional)</span></label>
+        <input id="vipId" type="text" placeholder="e.g. VIP-2026"
+          class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 transition-all"/>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Booking Details -->
+  <div class="space-y-4 border-t border-outline-variant/30 pt-6">
+    <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Booking Details</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <div>
+        <label for="pickupDate" class="block text-[11px] font-label-caps text-on-surface-variant mb-1 tracking-[0.1em]">PICK-UP DATE <span class="text-error">*</span></label>
+        <input id="pickupDate" type="date"
+          class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 transition-all"/>
+        <div id="pickupDate-err" class="field-error-msg hidden"><span class="material-symbols-outlined text-[14px]">error</span><span></span></div>
+      </div>
+
+      <div>
+        <label for="returnDate" class="block text-[11px] font-label-caps text-on-surface-variant mb-1 tracking-[0.1em]">RETURN DATE <span class="text-error">*</span></label>
+        <input id="returnDate" type="date"
+          class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 transition-all"/>
+        <div id="returnDate-err" class="field-error-msg hidden"><span class="material-symbols-outlined text-[14px]">error</span><span></span></div>
+      </div>
+
+      <div>
+        <label for="pickupLocation" class="block text-[11px] font-label-caps text-on-surface-variant mb-1 tracking-[0.1em]">PICK-UP LOCATION <span class="text-error">*</span></label>
+        <input id="pickupLocation" type="text" placeholder="e.g. London Heathrow, Hotel Ritz"
+          class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 transition-all"/>
+        <div id="pickupLocation-err" class="field-error-msg hidden"><span class="material-symbols-outlined text-[14px]">error</span><span></span></div>
+      </div>
+
+      <div>
+        <label for="returnLocation" class="block text-[11px] font-label-caps text-on-surface-variant mb-1 tracking-[0.1em]">RETURN LOCATION</label>
+        <input id="returnLocation" type="text" placeholder="Same as pick-up if not specified"
+          class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 transition-all"/>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Vehicle Selection -->
+  <div class="space-y-4 border-t border-outline-variant/30 pt-6">
+    <div class="flex justify-between items-center">
+      <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Select Vehicle</h3>
+      <a href="fleet.html" class="text-primary font-label-caps text-label-caps hover:text-primary-fixed transition-colors flex items-center gap-2">
+        <span>VIEW FLEET</span>
+        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+    </div>
+    <div>
+      <select id="vehicleSelect"
+        class="w-full bg-surface-container border border-outline-variant/30 rounded-lg px-4 py-3 text-on-surface transition-all">
+        <option value="">Select a vehicle from our fleet...</option>
+        <optgroup label="Rolls-Royce">
+          <option value="Rolls-Royce Phantom">Rolls-Royce Phantom — $1,200/day</option>
+          <option value="Rolls-Royce Ghost">Rolls-Royce Ghost — $950/day</option>
+        </optgroup>
+        <optgroup label="Bentley">
+          <option value="Bentley Flying Spur">Bentley Flying Spur — $1,100/day</option>
+          <option value="Bentley Continental GT">Bentley Continental GT — $1,050/day</option>
+          <option value="Bentley Bentayga">Bentley Bentayga — $980/day</option>
+        </optgroup>
+        <optgroup label="Mercedes-Benz">
+          <option value="Mercedes-Maybach S-Class">Mercedes-Maybach S-Class — $1,250/day</option>
+          <option value="Mercedes S-Class">Mercedes S-Class — $850/day</option>
+        </optgroup>
+        <optgroup label="German Performance">
+          <option value="BMW 7 Series">BMW 7 Series — $700/day</option>
+          <option value="Audi A8 L">Audi A8 L — $650/day</option>
+          <option value="Porsche Panamera">Porsche Panamera — $950/day</option>
+        </optgroup>
+        <optgroup label="British GT">
+          <option value="Jaguar XJ">Jaguar XJ — $620/day</option>
+        </optgroup>
+      </select>
+      <div id="vehicleSelect-err" class="field-error-msg hidden"><span class="material-symbols-outlined text-[14px]">error</span><span></span></div>
+    </div>
+  </div>
+
+  <!-- Additional Services -->
+  <div class="space-y-4 border-t border-outline-variant/30 pt-6">
+    <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Additional Services</h3>
+    <div class="space-y-3">
+      <label class="flex items-center gap-3 cursor-pointer group">
+        <input id="chkChauffeur" type="checkbox" class="w-4 h-4 border border-outline-variant/30 rounded bg-surface-container checked:bg-primary checked:border-primary transition-all"/>
+        <span class="text-on-surface font-body-md group-hover:text-primary transition-colors">Chauffeur Service</span>
+        <span class="ml-auto text-on-surface-variant text-[11px] font-label-caps">+$250/day</span>
+      </label>
+      <label class="flex items-center gap-3 cursor-pointer group">
+        <input id="chkAirport" type="checkbox" class="w-4 h-4 border border-outline-variant/30 rounded bg-surface-container checked:bg-primary checked:border-primary transition-all"/>
+        <span class="text-on-surface font-body-md group-hover:text-primary transition-colors">Airport Concierge</span>
+        <span class="ml-auto text-on-surface-variant text-[11px] font-label-caps">+$150/day</span>
+      </label>
+      <label class="flex items-center gap-3 cursor-pointer group">
+        <input id="chkInsurance" type="checkbox" class="w-4 h-4 border border-outline-variant/30 rounded bg-surface-container checked:bg-primary checked:border-primary transition-all"/>
+        <span class="text-on-surface font-body-md group-hover:text-primary transition-colors">Premium Insurance</span>
+        <span class="ml-auto text-on-surface-variant text-[11px] font-label-caps">Complimentary</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Duration & Price Preview -->
+  <div id="pricePreview" class="hidden border border-primary/20 bg-primary/5 rounded-xl p-5 space-y-2">
+    <p class="font-label-caps text-[10px] text-primary tracking-[0.15em]">BOOKING SUMMARY</p>
+    <div class="flex justify-between items-center">
+      <span class="text-on-surface-variant font-body-md" id="previewDuration">—</span>
+      <span class="text-primary font-headline-lg-mobile" id="previewPrice">—</span>
+    </div>
+    <p class="text-on-surface-variant text-[12px]" id="previewNote">Our concierge will confirm the exact rate within the hour.</p>
+  </div>
+
+  <!-- Submit Buttons -->
+  <div class="flex flex-col md:flex-row gap-4 border-t border-outline-variant/30 pt-6">
+    <button id="submitBtn" type="submit" class="flex-1 bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 shimmer-hover transition-all active:scale-95 flex items-center justify-center gap-2">
+      <span id="submitBtnText">CONFIRM BOOKING</span>
+      <span id="submitSpinner" class="hidden material-symbols-outlined animate-spin text-[18px]">autorenew</span>
+    </button>
+    <a href="fleet.html" class="flex-1 border border-primary/30 text-primary font-label-caps text-label-caps px-8 py-4 transition-colors hover:border-primary text-center flex items-center justify-center">
+      BROWSE FLEET
+    </a>
+  </div>
+
 </form>
 </div>
 </section>
 </main>
 
+<!-- SUCCESS MODAL -->
+<div id="successModal" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+  <div id="successModalCard" class="bg-surface-container-high border border-primary/20 rounded-xl p-10 max-w-md w-full text-center shadow-2xl">
+    <div class="w-16 h-16 rounded-full bg-primary/15 border border-primary/30 flex items-center justify-center mx-auto mb-6">
+      <span class="material-symbols-outlined text-primary text-3xl">check_circle</span>
+    </div>
+    <p class="font-label-caps text-[10px] text-primary tracking-[0.2em] mb-2">BOOKING RECEIVED</p>
+    <h2 id="successTitle" class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-4">Your request is confirmed</h2>
+    <p class="font-body-md text-on-surface-variant mb-3">Thank you, <strong id="successName" class="text-on-surface"></strong>. Our concierge team will contact you at <strong id="successEmail" class="text-primary"></strong> within the hour to finalise your reservation.</p>
+    <div id="successVehicle" class="bg-surface-container border border-primary/10 rounded-lg px-4 py-3 mb-8 text-on-surface font-body-md hidden"></div>
+    <div class="flex flex-col gap-3">
+      <a href="fleet.html" class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 shimmer-hover transition-all active:scale-95 text-center">EXPLORE MORE VEHICLES</a>
+      <button id="closeModal" class="border border-primary/30 text-primary font-label-caps text-label-caps px-8 py-3 hover:border-primary transition-colors">CLOSE</button>
+    </div>
+  </div>
+</div>
+
 <!-- Bottom Navigation Bar (Mobile only) -->
 <nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/95 backdrop-blur-2xl border-t border-primary/10 shadow-[0_-10px_20px_rgba(0,0,0,0.5)] flex justify-around items-center h-20 pb-safe px-4 rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant gap-1 transition-all hover:text-primary-fixed-dim active:scale-95" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-caps text-[8px] tracking-[0.1em]">HOME</span>
+</a>
 <a class="flex flex-col items-center justify-center text-on-surface-variant gap-1 transition-all hover:text-primary-fixed-dim active:scale-95" href="fleet.html">
 <span class="material-symbols-outlined" data-icon="directions_car">directions_car</span>
 <span class="font-label-caps text-[8px] tracking-[0.1em]">FLEET</span>
@@ -245,5 +512,274 @@ BROWSE FLEET
 <span class="font-label-caps text-[8px] tracking-[0.1em]">COLLECTIONS</span>
 </a>
 </nav>
+
+<script>
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function showError(id, message) {
+  const input = document.getElementById(id);
+  const errEl = document.getElementById(id + '-err');
+  if (!input || !errEl) return;
+  input.classList.add('field-error');
+  input.classList.remove('field-ok');
+  errEl.querySelector('span:last-child').textContent = message;
+  errEl.classList.remove('hidden');
+}
+
+function clearError(id) {
+  const input = document.getElementById(id);
+  const errEl = document.getElementById(id + '-err');
+  if (!input || !errEl) return;
+  input.classList.remove('field-error');
+  input.classList.add('field-ok');
+  errEl.classList.add('hidden');
+}
+
+function clearAllErrors() {
+  ['fullName','email','phone','pickupDate','returnDate','pickupLocation','vehicleSelect'].forEach(clearError);
+}
+
+// ── Vehicle pre-fill from URL query param (?vehicle=Rolls-Royce+Phantom) ─────
+(function prefillVehicle() {
+  const params = new URLSearchParams(window.location.search);
+  const v = params.get('vehicle');
+  if (!v) return;
+  const sel = document.getElementById('vehicleSelect');
+  for (let i = 0; i < sel.options.length; i++) {
+    if (sel.options[i].value === v) {
+      sel.selectedIndex = i;
+      clearError('vehicleSelect');
+      break;
+    }
+  }
+})();
+
+// ── VIP ID pre-fill from localStorage ────────────────────────────────────────
+(function prefillVip() {
+  const saved = localStorage.getItem('luxdriveVipId');
+  if (saved) document.getElementById('vipId').value = saved;
+})();
+
+// ── Set min date on pick-up to today ─────────────────────────────────────────
+(function setMinDates() {
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('pickupDate').setAttribute('min', today);
+  document.getElementById('returnDate').setAttribute('min', today);
+})();
+
+// ── Keep return date >= pick-up date ─────────────────────────────────────────
+document.getElementById('pickupDate').addEventListener('change', function() {
+  const returnEl = document.getElementById('returnDate');
+  if (this.value) {
+    returnEl.setAttribute('min', this.value);
+    if (returnEl.value && returnEl.value < this.value) {
+      returnEl.value = this.value;
+    }
+  }
+  updatePricePreview();
+  if (this.value) clearError('pickupDate');
+});
+
+document.getElementById('returnDate').addEventListener('change', function() {
+  updatePricePreview();
+  if (this.value) clearError('returnDate');
+});
+
+document.getElementById('vehicleSelect').addEventListener('change', function() {
+  updatePricePreview();
+  if (this.value) clearError('vehicleSelect');
+});
+
+// Real-time clear errors on input
+['fullName','email','phone','pickupLocation'].forEach(function(id) {
+  document.getElementById(id).addEventListener('input', function() {
+    if (this.value.trim()) clearError(id);
+  });
+});
+
+// ── Price preview ─────────────────────────────────────────────────────────────
+function updatePricePreview() {
+  const pickup = document.getElementById('pickupDate').value;
+  const ret    = document.getElementById('returnDate').value;
+  const vehicle = document.getElementById('vehicleSelect').value;
+  const preview = document.getElementById('pricePreview');
+
+  if (!pickup || !ret || !vehicle) {
+    preview.classList.add('hidden');
+    return;
+  }
+
+  const days = Math.max(1, Math.round((new Date(ret) - new Date(pickup)) / 86400000));
+  const note = days === 1 ? '1 day hire' : days + ' days hire';
+
+  document.getElementById('previewDuration').textContent = vehicle + ' · ' + note;
+  document.getElementById('previewPrice').textContent = 'Rate confirmed on booking';
+  preview.classList.remove('hidden');
+}
+
+// ── Validate all fields, return true if valid ─────────────────────────────────
+function validateForm() {
+  let valid = true;
+  clearAllErrors();
+
+  const name = document.getElementById('fullName').value.trim();
+  if (!name || name.length < 2) {
+    showError('fullName', 'Please enter your full name.');
+    valid = false;
+  }
+
+  const email = document.getElementById('email').value.trim();
+  const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email) {
+    showError('email', 'Please enter your email address.');
+    valid = false;
+  } else if (!emailRe.test(email)) {
+    showError('email', 'Please enter a valid email address (e.g. you@example.com).');
+    valid = false;
+  }
+
+  const phone = document.getElementById('phone').value.trim();
+  const phoneRe = /^[+\d\s\-().]{7,20}$/;
+  if (!phone) {
+    showError('phone', 'Please enter your phone number.');
+    valid = false;
+  } else if (!phoneRe.test(phone)) {
+    showError('phone', 'Please enter a valid phone number.');
+    valid = false;
+  }
+
+  const pickup = document.getElementById('pickupDate').value;
+  const today = new Date().toISOString().split('T')[0];
+  if (!pickup) {
+    showError('pickupDate', 'Please select a pick-up date.');
+    valid = false;
+  } else if (pickup < today) {
+    showError('pickupDate', 'Pick-up date cannot be in the past.');
+    valid = false;
+  }
+
+  const ret = document.getElementById('returnDate').value;
+  if (!ret) {
+    showError('returnDate', 'Please select a return date.');
+    valid = false;
+  } else if (pickup && ret < pickup) {
+    showError('returnDate', 'Return date must be on or after the pick-up date.');
+    valid = false;
+  }
+
+  const loc = document.getElementById('pickupLocation').value.trim();
+  if (!loc) {
+    showError('pickupLocation', 'Please enter a pick-up location.');
+    valid = false;
+  }
+
+  const vehicle = document.getElementById('vehicleSelect').value;
+  if (!vehicle) {
+    showError('vehicleSelect', 'Please select a vehicle from the fleet.');
+    valid = false;
+  }
+
+  return valid;
+}
+
+// ── Form submission ───────────────────────────────────────────────────────────
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  if (!validateForm()) {
+    // Scroll to first error
+    const firstErr = document.querySelector('.field-error');
+    if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  // Show loading state
+  const btn = document.getElementById('submitBtn');
+  const btnText = document.getElementById('submitBtnText');
+  const spinner = document.getElementById('submitSpinner');
+  btn.disabled = true;
+  btnText.textContent = 'PROCESSING...';
+  spinner.classList.remove('hidden');
+
+  // Simulate network request (500ms)
+  setTimeout(function() {
+    // Save VIP ID if entered
+    const vipId = document.getElementById('vipId').value.trim().toUpperCase();
+    if (vipId) localStorage.setItem('luxdriveVipId', vipId);
+
+    // Show success modal
+    const name    = document.getElementById('fullName').value.trim().split(' ')[0];
+    const email   = document.getElementById('email').value.trim();
+    const vehicle = document.getElementById('vehicleSelect').value;
+    const pickup  = document.getElementById('pickupDate').value;
+    const ret     = document.getElementById('returnDate').value;
+
+    document.getElementById('successName').textContent = name;
+    document.getElementById('successEmail').textContent = email;
+
+    const vehicleEl = document.getElementById('successVehicle');
+    if (vehicle) {
+      const days = Math.max(1, Math.round((new Date(ret) - new Date(pickup)) / 86400000));
+      vehicleEl.textContent = vehicle + ' · ' + (days === 1 ? '1 day' : days + ' days') + ' · ' + new Date(pickup).toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'}) + ' – ' + new Date(ret).toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'});
+      vehicleEl.classList.remove('hidden');
+    }
+
+    document.getElementById('successModal').classList.add('visible');
+    document.body.style.overflow = 'hidden';
+
+    // Reset loading state
+    btn.disabled = false;
+    btnText.textContent = 'CONFIRM BOOKING';
+    spinner.classList.add('hidden');
+  }, 500);
+});
+
+// ── Close modal ───────────────────────────────────────────────────────────────
+function closeModal() {
+  document.getElementById('successModal').classList.remove('visible');
+  document.body.style.overflow = '';
+  document.getElementById('bookingForm').reset();
+  document.getElementById('pricePreview').classList.add('hidden');
+  clearAllErrors();
+}
+
+document.getElementById('closeModal').addEventListener('click', closeModal);
+document.getElementById('successModal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+<script>
+    (() => {
+        const root = document.documentElement;
+        const savedTheme = localStorage.getItem('luxdrive-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const useDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+        root.classList.toggle('dark', useDark);
+
+        const syncToggle = () => {
+            const isDark = root.classList.contains('dark');
+            document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+                button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                button.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                const icon = button.querySelector('.material-symbols-outlined');
+                if (icon) icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+            });
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            syncToggle();
+            document.querySelectorAll('[data-theme-toggle]').forEach((button) => {
+                button.addEventListener('click', () => {
+                    const nextIsDark = !root.classList.contains('dark');
+                    root.classList.toggle('dark', nextIsDark);
+                    localStorage.setItem('luxdrive-theme', nextIsDark ? 'dark' : 'light');
+                    syncToggle();
+                });
+            });
+        });
+    })();
+</script>
 </body>
 </html>
